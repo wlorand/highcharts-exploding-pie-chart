@@ -4,7 +4,7 @@
   "description": "Data Visualization Prototype Pie Chart of WhereHaus total stats using Highcharts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --inspect server/server.js"
   },
   "repository": {
     "type": "git",
