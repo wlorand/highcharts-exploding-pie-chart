@@ -1,0 +1,12 @@
+/* File: styles.css: */
+
+h3 {
+  text-align: center;
+}
+
+.big-pie {
+  height: 500px;
+  margin: 10px auto;
+  width: 50%;
+  border: 1px dashed green;
+}
