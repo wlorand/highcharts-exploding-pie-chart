@@ -38,36 +38,28 @@
           data: [
             {
               name: "Postal Codes",
-              y: 36.1
+              y: 36.2
+            },
+            {
+              name: "Towns & Suburbs",
+              y: 31.5
             },
             {
               name: "POI",
-              y: 23.1,
+              y: 23.2,
               selected: true
             },
             {
-              name: "Towns",
-              y: 26.8
-            },
-            {
-              name: "Suburbs",
-              y: 4.7
-            },
-            {
               name: "Other Data Layers",
-              y: 3.4
+              y: 3.7
             },
             {
               name: "Admin Layers",
-              y: 2.9
+              y: 3.0
             },
             {
               name: "Geo Features",
-              y: 2.3
-            },
-            {
-              name: "Airports",
-              y: 0.2
+              y: 2.4
             }
           ]
         }
