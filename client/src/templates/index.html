@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YGEO-9A: WhereHaus Total Stats Pie Chart Prototype:</title>
+  <!-- Highcharts theme -->
+  <link rel="stylesheet" href="http://code.highcharts.com/css/themes/dark-unica.css">
+  <!-- include local styles last for highcharts overrides -->
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
-  <!-- 1- Make a Mount Point-->
+  <!-- 1- Mount Point-->
   <div id="wh-stats-pie" class="big-pie"></div>
 
   <!-- 2a: include jQuery (as HighCharts depends on it) -->
@@ -18,7 +21,10 @@
   <!-- 2b: include high charts lib (look ma, no version #s -->
   <script src="http://code.highcharts.com/highcharts.js"></script>
 
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
   <!-- 3: highCharts functionality / config object -->
+  <script src="../scripts/pie-theme.js"></script>
   <script src="../scripts/index.js"></script>
 
 </body>

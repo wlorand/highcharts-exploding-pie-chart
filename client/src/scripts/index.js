@@ -11,10 +11,16 @@
         type: "pie"
       },
       title: {
-        text: "WhereHaus Total Stats"
+        text: "WhereHaus Places",
+        style: {
+          color: "rgb(255,255,255)"
+        }
       },
       tooltip: {
-        pointFormat: "<b>{point.percentage:.1f}%</b>" // ?
+        pointFormat: "<b>{point.x}</b>", //"<b>{point.percentage:.1f}%</b>",
+        style: {
+          color: "rgb(255,255,255)"
+        }
       },
       plotOptions: {
         pie: {
@@ -27,44 +33,83 @@
             style: {
               color:
                 (Highcharts.theme && Highcharts.theme.contrastTextColor) ||
-                "black"
+                "white"
             }
           }
         }
       },
+      // Data Starts Here
       series: [
         {
+          name: "WhereHaus Places",
           colorByPoint: true,
           data: [
             {
               name: "Postal Codes",
-              y: 36.2
+              y: 36.2,
+              x: "3,317,478"
             },
             {
               name: "Towns & Suburbs",
-              y: 31.5
+              y: 31.5,
+              x: "2,903,126"
             },
             {
               name: "POI",
               y: 23.2,
-              selected: true
+              x: "2,128,837",
+              drilldown: "POI"
             },
             {
               name: "Other Data Layers",
-              y: 3.7
+              y: 3.7,
+              x: "329,110"
             },
             {
               name: "Admin Layers",
-              y: 3.0
+              y: 3.0,
+              x: "269,271"
             },
             {
               name: "Geo Features",
-              y: 2.4
+              y: 2.4,
+              x: "210,494"
             }
           ]
         }
-      ]
+      ],
+      drilldown: {
+        series: [
+          {
+            name: "POI",
+            id: "POI",
+            data: [
+              {
+                name: "Tourist Attraction",
+                y: 33,
+                x: "1001"
+              },
+              {
+                name: "Sports Venue",
+                y: 34,
+                x: "1009"
+              },
+              {
+                name: "Shopping Mall",
+                y: 34,
+                x: "1009"
+              }
+
+              // ["Tourist Attraction", 33],
+              // ["Sports Venue", 34],
+              // ["Shopping Mall", 33]
+            ]
+          }
+        ]
+      }
     });
   };
+
+  // vanilla JS event handler
   document.addEventListener("DOMContentLoaded", renderWHStatsPie);
 })();

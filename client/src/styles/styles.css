@@ -1,5 +1,9 @@
 /* File: styles.css: */
 
+body {
+  background-color: rgb(0, 0, 0);
+}
+
 h3 {
   text-align: center;
 }
@@ -8,5 +12,43 @@ h3 {
   height: 500px;
   margin: 10px auto;
   width: 50%;
-  border: 1px dashed green;
+  border: 1px solid rgb(255, 255, 255);
+  z-index: 2;
+}
+
+/* highcharts style overrides */
+.highcharts-color-0 {
+  fill: rgb(240, 2, 127);
+  stroke: rgb(240, 2, 127);
+}
+
+.highcharts-color-1 {
+  fill: rgb(56, 108, 176);
+  stroke: rgb(56, 108, 176);
+}
+
+.highcharts-color-2 {
+  fill: rgb(255, 255, 153);
+  stroke: rgb(255, 255, 153);
+}
+
+.highcharts-color-3 {
+  fill: rgb(253, 192, 134);
+  /*stroke: rgb(253, 192, 134); */
+}
+
+.highcharts-color-4 {
+  fill: rgb(190, 174, 212);
+  stroke: rgb(190, 174, 212);
+}
+
+.highcharts-color-5 {
+  fill: rgb(127, 201, 127);
+  stroke: rgb(127, 201, 127);
+}
+
+.highcharts-data-label-connector {
+  stroke: white;
+  stroke-width: 1;
+  fill: none;
 }
