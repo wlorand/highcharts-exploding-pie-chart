@@ -1,16 +1,16 @@
 {
-  "name": "dataviz-chart-wherehaus-total-stats",
+  "name": "highcharts-exploding-pie-chart",
   "version": "1.0.0",
-  "description": "Data Visualization Prototype Pie Chart of WhereHaus total stats using Highcharts",
-  "main": "index.js",
+  "description": "Data Visualization Prototype Pie Chart of Yahoo! Geo WhereHaus total stats using Highcharts",
+  "main": "server/server.js",
   "scripts": {
     "start": "node --inspect server/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.ouroath.com:wlorand/dataviz-chart-wherehaus-total-stats.git"
+    "url": "https://github.com/wlorand/highcharts-exploding-pie-chart.git"
   },
-  "author": "william.lorand@oath.com",
+  "author": "will@milemarker3.org",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
