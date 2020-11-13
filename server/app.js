@@ -1,17 +1,21 @@
-// File: app.js
+/**
+ * File: app.js
+ * Desc: Express server setup
+ * */
 
 // Module dependencies
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 // Routing File
-var index = require('./routes/indexRoute');
+const index = require('./routes/indexRoute');
 
-// Create the App 
-var app = express();
+// Create the App
+const app = express();
 
 // view engine setup (required)
 app.set('views', path.join(__dirname, 'views'));
@@ -29,14 +33,14 @@ app.use(express.static('client/src')); // change to 'client/dist' when you have 
 app.use('/', index);
 
 // Catch 404 Error and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -46,4 +50,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app; // make the whole express 'app' available to other modules 
+module.exports = app; // make the whole express 'app' available to other modules

@@ -16,7 +16,7 @@ h3 {
   z-index: 2;
 }
 
-/* highcharts style overrides */
+/* highcharts style overrides -- TODO make this an {} ? */
 .highcharts-color-0 {
   fill: rgb(240, 2, 127);
   stroke: rgb(240, 2, 127);

@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yahoo! Geo WhereHaus Points (HighCharts Exploding Pie Chart)</title>
+    <!-- Highcharts theme -->
+    <link
+      rel="stylesheet"
+      href="http://code.highcharts.com/css/themes/dark-unica.css"
+    />
+    <!-- local styles -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YGEO-9A: WhereHaus Total Stats Pie Chart Prototype:</title>
-  <!-- Highcharts theme -->
-  <link rel="stylesheet" href="http://code.highcharts.com/css/themes/dark-unica.css">
-  <!-- include local styles last for highcharts overrides -->
-  <link rel="stylesheet" href="../styles/styles.css">
-</head>
+  <body>
+    <!-- 1- Mount Point-->
+    <div id="wh-stats-pie" class="big-pie"></div>
 
-<body>
-  <!-- 1- Mount Point-->
-  <div id="wh-stats-pie" class="big-pie"></div>
+    <!-- 2a: include jQuery (HighCharts dependency) -->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- 2a: include jQuery (as HighCharts depends on it) -->
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- 2b: include high charts libs (look ma, no version #s -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
 
-  <!-- 2b: include high charts lib (look ma, no version #s -->
-  <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
-  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
-  <!-- 3: highCharts functionality / config object -->
-  <script src="../scripts/pie-theme.js"></script>
-  <script src="../scripts/index.js"></script>
-
-</body>
-
+    <!-- 3: highCharts functionality / config object -->
+    <script src="../scripts/pie-theme.js"></script>
+    <script src="../scripts/index.js"></script>
+  </body>
 </html>
